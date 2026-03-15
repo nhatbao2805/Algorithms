@@ -1,0 +1,11 @@
+{
+  "name": "algorithms-playground",
+  "private": true,
+  "scripts": {
+    "playground": "nodemon --watch algorithms/playground.js algorithms/playground.js",
+    "playground:quiet": "nodemon --watch algorithms/playground.js algorithms/playground.js --quiet"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
