@@ -2,23 +2,43 @@
 
 ## Cách sử dụng
 
-Mỗi file là một bài học độc lập, có thể chạy trực tiếp bằng Node.js:
+### Yêu cầu
+
+- **Node.js** (khuyến nghị 14+). Kiểm tra: `node -v`
+
+### Chạy từng bài thuật toán
+
+Mỗi file là một bài độc lập. Chạy từ **thư mục gốc project (Preview)**:
 
 ```bash
+# Ví dụ chạy bài Big-O, Linear Search, Binary Search
 node algorithms/00-big-o-notation.js
 node algorithms/01-linear-search.js
-# ... tương tự cho các file khác
+node algorithms/02-binary-search.js
 ```
 
-### 🎮 Playground – tự chạy lại khi Save
-
-File `playground.js` dùng để bạn tự code thử. Để **mỗi lần save là log chạy lại ngay**, trong thư mục **Preview** chạy:
+Hoặc khi đang ở trong `algorithms/`:
 
 ```bash
-npm run playground
+cd algorithms
+node 00-big-o-notation.js
+node 01-linear-search.js
 ```
 
-Giữ terminal mở, sửa `algorithms/playground.js` rồi **Ctrl+S** (hoặc Cmd+S) → script tự chạy lại và in log ra terminal.
+Thay `00`, `01`, … bằng số file bài bạn muốn (xem bảng bên dưới).
+
+### 🎮 Playground – code thử và debug
+
+File **`playground.js`** dùng để bạn tự viết code và xem log.
+
+| Cách | Lệnh | Khi nào dùng |
+|------|------|--------------|
+| Chạy 1 lần | `node algorithms/playground.js` | Chỉ cần chạy nhanh, không cần watch |
+| **Tự chạy lại khi save** | `npm run playground` (trong thư mục Preview) | Đang code, muốn mỗi lần save là thấy log mới |
+
+**Cách dùng watch:** Mở terminal → chạy `npm run playground` → giữ terminal mở → sửa `playground.js` → **Ctrl+S** (Windows/Linux) hoặc **Cmd+S** (Mac) → script chạy lại và in log ra terminal.
+
+Trong `playground.js` có sẵn helper: `debug()`, `assertEqual()`, `measureTime()`, `printArray()`.
 
 ## Cấu trúc mỗi file
 
