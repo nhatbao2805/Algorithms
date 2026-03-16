@@ -49,6 +49,29 @@ Trong `playground.js` có sẵn helper: `debug()`, `assertEqual()`, `measureTime
 - **Ví dụ**: Từ cơ bản → nâng cao, có input/output rõ ràng
 - **Debug**: Có `console.log` để kiểm tra kết quả ngay
 
+## Event Loop Cheat Sheet (Call Stack / Microtask / Macrotask)
+
+- **Call Stack**: Nơi chạy code **đồng bộ**. Khi stack chưa rỗng thì **không** xử lý bất kỳ task bất đồng bộ nào.
+- **Macrotask Queue**: Hàng đợi các task "lớn": `setTimeout`, `setInterval`, I/O, DOM events, `setImmediate` (Node),...  
+  - Mỗi vòng event loop chỉ lấy **1 macrotask** khi:
+    - Call stack rỗng
+    - Và **microtask queue đã trống**
+- **Microtask Queue**: `Promise.then/catch/finally`, `queueMicrotask`, `MutationObserver`.  
+  - Được ưu tiên hơn macrotask.  
+  - Sau mỗi lần:
+    - Chạy xong toàn bộ code sync, **hoặc**
+    - Chạy xong 1 macrotask  
+    → Event loop sẽ chạy **tất cả** microtask trong queue trước khi lấy macrotask tiếp theo.
+- **Luật nhớ nhanh**:
+  1. **Sync trước** (call stack)
+  2. Sau đó **toàn bộ microtask**
+  3. Rồi mới tới **1 macrotask**
+  4. Lặp lại bước 1–3
+- **Bẫy thường gặp**:
+  - `setTimeout(fn, 0)` **luôn** đợi: sync xong + microtask xong → mới được chạy.
+  - Microtask có thể tự tạo microtask mới → nếu không cẩn thận có thể khiến macrotask không bao giờ được chạy (starvation).
+  - `async/await` sử dụng Promise → phần sau `await` thực chất là **microtask**.
+
 ## Danh sách thuật toán
 
 ### 🟢 Cơ bản (Basic)
@@ -91,6 +114,7 @@ Trong `playground.js` có sẵn helper: `debug()`, `assertEqual()`, `measureTime
 | 22 | `22-backtracking.js` | Quay lui |
 | 23 | `23-dijkstra.js` | Dijkstra (Đường đi ngắn nhất) |
 | 24 | `24-trie.js` | Trie (Cây tiền tố) |
+| 25 | `25-event-loop-callstack-exercises.js` | Event Loop, Call Stack, Microtask, Macrotask (+ bài tập) |
 
 ## Tips ôn luyện
 
