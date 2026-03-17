@@ -2,17 +2,17 @@
  * ============================================
  * 📘 BIG-O NOTATION - ĐỘ PHỨC TẠP THUẬT TOÁN
  * ============================================
- * 
+ *
  * 🔍 LÝ THUYẾT:
  * Big-O Notation là cách đo lường hiệu suất của thuật toán
  * khi kích thước dữ liệu đầu vào (n) tăng lên.
- * 
+ *
  * Nó cho ta biết:
  * - Thuật toán chạy NHANH hay CHẬM khi dữ liệu lớn
  * - Thuật toán dùng BAO NHIÊU BỘ NHỚ
- * 
+ *
  * 📊 CÁC MỨC ĐỘ PHỨC TẠP (từ nhanh → chậm):
- * 
+ *
  * O(1)        - Hằng số      : Không phụ thuộc vào n
  * O(log n)    - Logarit       : Tăng rất chậm (binary search)
  * O(n)        - Tuyến tính    : Tăng tỉ lệ thuận với n
@@ -21,7 +21,7 @@
  * O(n³)       - Lập phương    : 3 vòng lặp lồng nhau
  * O(2^n)      - Hàm mũ        : Đệ quy không tối ưu
  * O(n!)       - Giai thừa     : Hoán vị, brute force
- * 
+ *
  * 📝 CHEAT NOTES:
  * - Time Complexity: Đo thời gian chạy
  * - Space Complexity: Đo bộ nhớ sử dụng
@@ -51,16 +51,21 @@ function getFirstElement(arr) {
 function binarySearchExample(arr, target) {
   console.log(`\n--- O(log n): Tìm kiếm nhị phân ---`);
   console.log(`Input: arr=[${arr}], target=${target}`);
-  let left = 0, right = arr.length - 1;
+  let left = 0,
+    right = arr.length - 1;
   let steps = 0;
 
   while (left <= right) {
     steps++;
     const mid = Math.floor((left + right) / 2);
-    console.log(`  Bước ${steps}: left=${left}, right=${right}, mid=${mid}, arr[mid]=${arr[mid]}`);
+    console.log(
+      `  Bước ${steps}: left=${left}, right=${right}, mid=${mid}, arr[mid]=${arr[mid]}`,
+    );
     if (arr[mid] === target) {
       console.log(`Output: Tìm thấy tại index ${mid} sau ${steps} bước`);
-      console.log(`⏱️ Mảng ${arr.length} phần tử chỉ cần ~${Math.ceil(Math.log2(arr.length))} bước`);
+      console.log(
+        `⏱️ Mảng ${arr.length} phần tử chỉ cần ~${Math.ceil(Math.log2(arr.length))} bước`,
+      );
       return mid;
     }
     if (arr[mid] < target) left = mid + 1;
@@ -101,7 +106,9 @@ function findDuplicatePairs(arr) {
       steps++;
       if (arr[i] === arr[j]) {
         pairs.push([i, j]);
-        console.log(`  Bước ${steps}: Tìm thấy cặp trùng arr[${i}]=${arr[i]} == arr[${j}]=${arr[j]}`);
+        console.log(
+          `  Bước ${steps}: Tìm thấy cặp trùng arr[${i}]=${arr[i]} == arr[${j}]=${arr[j]}`,
+        );
       }
     }
   }
@@ -140,24 +147,24 @@ function spaceComplexityDemo() {
   console.log(`O(1) Space: Chỉ dùng 1 biến sum = ${sum}`);
 
   // O(n) Space
-  const doubled = arr.map(x => x * 2);
+  const doubled = arr.map((x) => x * 2);
   console.log(`O(n) Space: Tạo mảng mới [${doubled}] - cùng kích thước input`);
 
   // O(n²) Space
   const n = 3;
   const matrix = Array.from({ length: n }, (_, i) =>
-    Array.from({ length: n }, (_, j) => i * n + j)
+    Array.from({ length: n }, (_, j) => i * n + j),
   );
   console.log(`O(n²) Space: Tạo ma trận ${n}x${n}:`);
-  matrix.forEach(row => console.log(`  [${row}]`));
+  matrix.forEach((row) => console.log(`  [${row}]`));
 }
 
 // ============================
 // 🏃 CHẠY TẤT CẢ VÍ DỤ
 // ============================
-console.log('╔══════════════════════════════════════╗');
-console.log('║   BIG-O NOTATION - ĐỘ PHỨC TẠP     ║');
-console.log('╚══════════════════════════════════════╝');
+console.log("╔══════════════════════════════════════╗");
+console.log("║   BIG-O NOTATION - ĐỘ PHỨC TẠP     ║");
+console.log("╚══════════════════════════════════════╝");
 
 getFirstElement([10, 20, 30, 40, 50]);
 binarySearchExample([1, 3, 5, 7, 9, 11, 13, 15, 17, 19], 13);
@@ -166,14 +173,14 @@ findDuplicatePairs([1, 2, 3, 2, 1]);
 fibonacci(10);
 spaceComplexityDemo();
 
-console.log(`\n${'='.repeat(50)}`);
-console.log('📋 BẢNG TÓM TẮT:');
-console.log('='.repeat(50));
-console.log('O(1)      | Truy cập mảng, phép toán đơn');
-console.log('O(log n)  | Binary search, cây cân bằng');
-console.log('O(n)      | Duyệt mảng 1 lần, tìm kiếm tuyến tính');
-console.log('O(n log n)| Merge sort, Quick sort (trung bình)');
-console.log('O(n²)     | 2 vòng lặp lồng, Bubble/Selection sort');
-console.log('O(2^n)    | Đệ quy không memo, tập con');
-console.log('O(n!)     | Hoán vị, bài toán người bán hàng');
-console.log('='.repeat(50));
+console.log(`\n${"=".repeat(50)}`);
+console.log("📋 BẢNG TÓM TẮT:");
+console.log("=".repeat(50));
+console.log("O(1)      | Truy cập mảng, phép toán đơn");
+console.log("O(log n)  | Binary search, cây cân bằng");
+console.log("O(n)      | Duyệt mảng 1 lần, tìm kiếm tuyến tính");
+console.log("O(n log n)| Merge sort, Quick sort (trung bình)");
+console.log("O(n²)     | 2 vòng lặp lồng, Bubble/Selection sort");
+console.log("O(2^n)    | Đệ quy không memo, tập con");
+console.log("O(n!)     | Hoán vị, bài toán người bán hàng");
+console.log("=".repeat(50));

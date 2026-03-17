@@ -10,10 +10,10 @@
  * - Làm xong bài trong file exercises rồi mới mở file này.
  */
 
-const LINE = '─'.repeat(50);
+const LINE = "─".repeat(50);
 
 function sep(title) {
-  console.log('\n' + LINE);
+  console.log("\n" + LINE);
   console.log(title);
   console.log(LINE);
 }
@@ -22,7 +22,7 @@ function sep(title) {
 // ĐÁP ÁN BÀI 1
 // ============================================
 function dapAnBai1() {
-  sep('ĐÁP ÁN BÀI 1: sync vs setTimeout vs Promise');
+  sep("ĐÁP ÁN BÀI 1: sync vs setTimeout vs Promise");
 
   /**
    * Code gốc:
@@ -47,18 +47,22 @@ function dapAnBai1() {
    * 4. 'B - setTimeout 0' (macrotask)
    */
 
-  console.log('Thứ tự đúng: A → D → C → B');
-  console.log('Giải thích:');
-  console.log('- A, D là code đồng bộ nên chạy trước.');
-  console.log('- Promise.then tạo microtask → chạy sau khi toàn bộ sync kết thúc.');
-  console.log('- setTimeout là macrotask → chỉ chạy sau khi microtask queue rỗng.');
+  console.log("Thứ tự đúng: A → D → C → B");
+  console.log("Giải thích:");
+  console.log("- A, D là code đồng bộ nên chạy trước.");
+  console.log(
+    "- Promise.then tạo microtask → chạy sau khi toàn bộ sync kết thúc.",
+  );
+  console.log(
+    "- setTimeout là macrotask → chỉ chạy sau khi microtask queue rỗng.",
+  );
 }
 
 // ============================================
 // ĐÁP ÁN BÀI 2
 // ============================================
 function dapAnBai2() {
-  sep('ĐÁP ÁN BÀI 2: nhiều Promise.then liên tiếp');
+  sep("ĐÁP ÁN BÀI 2: nhiều Promise.then liên tiếp");
 
   /**
    * Code gốc:
@@ -100,14 +104,14 @@ function dapAnBai2() {
    * 5. '3 - microtask 2'
    */
 
-  console.log('Thứ tự đúng: 1 → 5 → 2 → 4 → 3');
+  console.log("Thứ tự đúng: 1 → 5 → 2 → 4 → 3");
 }
 
 // ============================================
 // ĐÁP ÁN BÀI 3
 // ============================================
 function dapAnBai3() {
-  sep('ĐÁP ÁN BÀI 3: mix microtask + macrotask');
+  sep("ĐÁP ÁN BÀI 3: mix microtask + macrotask");
 
   /**
    * Code gốc (rút gọn):
@@ -162,14 +166,14 @@ function dapAnBai3() {
    *   A → G → F → B → D → C → E
    */
 
-  console.log('Thứ tự đúng: A → G → F → B → D → C → E');
+  console.log("Thứ tự đúng: A → G → F → B → D → C → E");
 }
 
 // ============================================
 // ĐÁP ÁN BÀI 4
 // ============================================
 function dapAnBai4() {
-  sep('ĐÁP ÁN BÀI 4: queueMicrotask vs Promise vs setTimeout');
+  sep("ĐÁP ÁN BÀI 4: queueMicrotask vs Promise vs setTimeout");
 
   /**
    * Code gốc:
@@ -204,7 +208,7 @@ function dapAnBai4() {
    */
 
   console.log(
-    'Thứ tự đúng: start → end → microtask 1 - queueMicrotask → microtask 2 - Promise.then → macrotask 1 - setTimeout'
+    "Thứ tự đúng: start → end → microtask 1 - queueMicrotask → microtask 2 - Promise.then → macrotask 1 - setTimeout",
   );
 }
 
@@ -212,7 +216,7 @@ function dapAnBai4() {
 // ĐÁP ÁN BÀI 5
 // ============================================
 function dapAnBai5() {
-  sep('ĐÁP ÁN BÀI 5: Promise lồng nhau');
+  sep("ĐÁP ÁN BÀI 5: Promise lồng nhau");
 
   /**
    * Code gốc:
@@ -249,14 +253,14 @@ function dapAnBai5() {
    *   1 → 5 → 2 → 3 → 4
    */
 
-  console.log('Thứ tự đúng: 1 → 5 → 2 → 3 → 4');
+  console.log("Thứ tự đúng: 1 → 5 → 2 → 3 → 4");
 }
 
 // ============================================
 // ĐÁP ÁN BÀI 6
 // ============================================
 function dapAnBai6() {
-  sep('ĐÁP ÁN BÀI 6: setTimeout trong Promise');
+  sep("ĐÁP ÁN BÀI 6: setTimeout trong Promise");
 
   /**
    * Code gốc:
@@ -295,14 +299,14 @@ function dapAnBai6() {
    *   A → E → B → D → C
    */
 
-  console.log('Thứ tự đúng: A → E → B → D → C');
+  console.log("Thứ tự đúng: A → E → B → D → C");
 }
 
 // ============================================
 // ĐÁP ÁN BÀI 7
 // ============================================
 function dapAnBai7() {
-  sep('ĐÁP ÁN BÀI 7: Microtask starvation (nâng cao)');
+  sep("ĐÁP ÁN BÀI 7: Microtask starvation (nâng cao)");
 
   /**
    * Code gốc (rút gọn):
@@ -360,10 +364,10 @@ function dapAnBai7() {
    */
 
   console.log(
-    'Thứ tự đúng: sync start → sync end → microtask 1 → microtask 2 → microtask 3 → timeout'
+    "Thứ tự đúng: sync start → sync end → microtask 1 → microtask 2 → microtask 3 → timeout",
   );
   console.log(
-    'Giải thích starvation: nếu microtask luôn tự tạo microtask mới không dừng, queue microtask không bao giờ rỗng nên timeout không được chạy.'
+    "Giải thích starvation: nếu microtask luôn tự tạo microtask mới không dừng, queue microtask không bao giờ rỗng nên timeout không được chạy.",
   );
 }
 
@@ -371,7 +375,7 @@ function dapAnBai7() {
 // ĐÁP ÁN BÀI 8
 // ============================================
 function dapAnBai8() {
-  sep('ĐÁP ÁN BÀI 8: async/await + Promise + setTimeout');
+  sep("ĐÁP ÁN BÀI 8: async/await + Promise + setTimeout");
 
   /**
    * Code gốc:
@@ -428,14 +432,14 @@ function dapAnBai8() {
    *   1 → 3 → 4 → 6 → 2 → 5
    */
 
-  console.log('Thứ tự đúng: 1 → 3 → 4 → 6 → 2 → 5');
+  console.log("Thứ tự đúng: 1 → 3 → 4 → 6 → 2 → 5");
 }
 
 // ============================================
 // ĐÁP ÁN BÀI 9
 // ============================================
 function dapAnBai9() {
-  sep('ĐÁP ÁN BÀI 9: then chain phức tạp + nested Promise');
+  sep("ĐÁP ÁN BÀI 9: then chain phức tạp + nested Promise");
 
   /**
    * Code gốc:
@@ -491,14 +495,14 @@ function dapAnBai9() {
    * (Mấu chốt: C chạy sau B, F chạy sau E, D chờ toàn bộ chuỗi Promise bên trên resolve.)
    */
 
-  console.log('Thứ tự tham khảo: A → G → B → E → C → F → D');
+  console.log("Thứ tự tham khảo: A → G → B → E → C → F → D");
 }
 
 // ============================================
 // ĐÁP ÁN BÀI 10
 // ============================================
 function dapAnBai10() {
-  sep('ĐÁP ÁN BÀI 10: setTimeout lồng nhau + microtask');
+  sep("ĐÁP ÁN BÀI 10: setTimeout lồng nhau + microtask");
 
   /**
    * Code gốc:
@@ -554,7 +558,7 @@ function dapAnBai10() {
    */
 
   console.log(
-    'Thứ tự đúng: start → end → M2 ngoài → T1 → M1 trong T1 → T3 → T2 trong T1'
+    "Thứ tự đúng: start → end → M2 ngoài → T1 → M1 trong T1 → T3 → T2 trong T1",
   );
 }
 
@@ -562,7 +566,7 @@ function dapAnBai10() {
 // ĐÁP ÁN BÀI 11
 // ============================================
 function dapAnBai11() {
-  sep('ĐÁP ÁN BÀI 11: async/await lồng nhau + nhiều Promise');
+  sep("ĐÁP ÁN BÀI 11: async/await lồng nhau + nhiều Promise");
 
   /**
    * Code gốc:
@@ -596,7 +600,7 @@ function dapAnBai11() {
    * - Sau đó đăng ký microtask: 'E - outer microtask'.
    *
    * Sau khi toàn bộ sync xong:
-   * - Microtask hàng chờ (thứ tự tạo): 
+   * - Microtask hàng chờ (thứ tự tạo):
    *   1) inner-then (log C)
    *   2) outer microtask (log E)
    *   3) phần còn lại của inner (log D)
@@ -615,14 +619,14 @@ function dapAnBai11() {
    *   A → B → C → E → D → F
    */
 
-  console.log('Thứ tự tham khảo: A → B → C → E → D → F');
+  console.log("Thứ tự tham khảo: A → B → C → E → D → F");
 }
 
 // ============================================
 // ĐÁP ÁN BÀI 12
 // ============================================
 function dapAnBai12() {
-  sep('ĐÁP ÁN BÀI 12: Promise.resolve vs Promise.reject + catch');
+  sep("ĐÁP ÁN BÀI 12: Promise.resolve vs Promise.reject + catch");
 
   /**
    * Code gốc:
@@ -657,14 +661,16 @@ function dapAnBai12() {
    *   1 → 6 → 2 → 4 → 5
    */
 
-  console.log('Thứ tự đúng: 1 → 6 → 2 - then 1 → 4 - catch → 5 - then sau catch');
+  console.log(
+    "Thứ tự đúng: 1 → 6 → 2 - then 1 → 4 - catch → 5 - then sau catch",
+  );
 }
 
 // ============================================
 // ĐÁP ÁN BÀI 13
 // ============================================
 function dapAnBai13() {
-  sep('ĐÁP ÁN BÀI 13: Promise.all + setTimeout');
+  sep("ĐÁP ÁN BÀI 13: Promise.all + setTimeout");
 
   /**
    * Code gốc:
@@ -701,14 +707,14 @@ function dapAnBai13() {
    *   start → end → M1 → T1 → ALL done
    */
 
-  console.log('Thứ tự đúng: start → end → M1 → T1 → ALL done');
+  console.log("Thứ tự đúng: start → end → M1 → T1 → ALL done");
 }
 
 // ============================================
 // ĐÁP ÁN BÀI 14
 // ============================================
 function dapAnBai14() {
-  sep('ĐÁP ÁN BÀI 14: Vòng lặp sync nặng + bất đồng bộ');
+  sep("ĐÁP ÁN BÀI 14: Vòng lặp sync nặng + bất đồng bộ");
 
   /**
    * Code gốc:
@@ -736,14 +742,14 @@ function dapAnBai14() {
    *   A → D → C → B
    */
 
-  console.log('Thứ tự đúng: A → D → C → B');
+  console.log("Thứ tự đúng: A → D → C → B");
 }
 
 // ============================================
 // ĐÁP ÁN BÀI 15
 // ============================================
 function dapAnBai15() {
-  sep('ĐÁP ÁN BÀI 15: Kết hợp tổng hợp');
+  sep("ĐÁP ÁN BÀI 15: Kết hợp tổng hợp");
 
   /**
    * Code gốc (rút gọn):
@@ -802,16 +808,16 @@ function dapAnBai15() {
    */
 
   console.log(
-    'Thứ tự tham khảo (có thể khác chút tùy engine, nhưng ý tưởng chính): 1 → 4 → 6 → 7 → 9 → 5 → 2 → 3 → 8'
+    "Thứ tự tham khảo (có thể khác chút tùy engine, nhưng ý tưởng chính): 1 → 4 → 6 → 7 → 9 → 5 → 2 → 3 → 8",
   );
 }
 
 // ============================================
 // CHẠY TẤT CẢ ĐÁP ÁN
 // ============================================
-console.log('╔══════════════════════════════════════════╗');
-console.log('║ EVENT LOOP - ĐÁP ÁN CÁC BÀI TẬP         ║');
-console.log('╚══════════════════════════════════════════╝');
+console.log("╔══════════════════════════════════════════╗");
+console.log("║ EVENT LOOP - ĐÁP ÁN CÁC BÀI TẬP         ║");
+console.log("╚══════════════════════════════════════════╝");
 
 dapAnBai1();
 dapAnBai2();
@@ -829,7 +835,6 @@ dapAnBai13();
 dapAnBai14();
 dapAnBai15();
 
-console.log('\n' + '='.repeat(50));
-console.log('✅ Đã in xong đáp án & giải thích cho tất cả bài.');
-console.log('='.repeat(50));
-
+console.log("\n" + "=".repeat(50));
+console.log("✅ Đã in xong đáp án & giải thích cho tất cả bài.");
+console.log("=".repeat(50));
