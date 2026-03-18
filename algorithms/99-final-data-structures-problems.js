@@ -97,6 +97,26 @@ console.log("    A - B - C - D");
 console.log("    A - E - D");
 console.log("  → Kết quả: 2 (A → E → D)");
 
+console.log("\n--- 🟢 CƠ BẢN THÊM ---");
+console.log("\nFINAL 6: Stack undo/redo (2 stack).");
+console.log("- Thao tác: do(action), undo(), redo(). Dùng 2 stack lưu history và redo.");
+console.log("\nFINAL 7: Kiểm tra dấu ngoặc cân bằng (stack).");
+console.log("- Chuỗi chỉ gồm ()[]{} kiểm tra đóng mở đúng.");
+console.log("\nFINAL 8: First non-repeating character trong stream (queue + map).");
+console.log("- Nhận từng ký tự, trả về ký tự đầu tiên chưa lặp trong stream đến hiện tại.");
+
+console.log("\n--- 🟡 TRUNG BÌNH THÊM ---");
+console.log("\nFINAL 9: Cache với TTL (time-to-live) dùng Map + thời gian hết hạn.");
+console.log("- get(key): null nếu hết hạn. set(key, value, ttlMs).");
+console.log("\nFINAL 10: Trie đơn giản (insert, search, startsWith) cho autocomplete.");
+console.log("\nFINAL 11: Design hit counter: count hits trong 5 phút gần nhất (queue lưu timestamp).");
+
+console.log("\n--- 🔴 NÂNG CAO THÊM ---");
+console.log("\nFINAL 12: Rate limiter sliding window: tối đa N request trong cửa sổ 1 giây (queue timestamps).");
+console.log("\nFINAL 13: Serialize/Deserialize N-ary tree (cây mỗi node có nhiều con).");
+console.log("\nFINAL 14: Task scheduler với dependency: cho danh sách task và phụ thuộc, in ra thứ tự thực thi (topological sort).");
+console.log("\nFINAL 15: Mini search engine: index nhiều document (id, text), query trả về doc id chứa tất cả từ (inverted index + set).");
+
 console.log("\n" + "=".repeat(50));
 console.log("👉 Lời giải + phân tích: xem file 99-final-data-structures-solutions.js");
 console.log("=".repeat(50));

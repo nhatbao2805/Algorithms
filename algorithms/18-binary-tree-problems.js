@@ -96,6 +96,21 @@ console.log("  LCA(2, 4) = 2");
 console.log("Gợi ý hàm:");
 console.log("  function lowestCommonAncestor(root, p, q) { /* TODO */ }");
 
+console.log("\n--- 🟢 CƠ BẢN THÊM ---");
+console.log("\nBÀI 6: Inorder / Preorder / Postorder traversal (đệ quy và iterative dùng stack).");
+console.log("BÀI 7: Đếm số node trong cây (countNodes).");
+console.log("BÀI 8: Tìm node có giá trị lớn nhất / nhỏ nhất trong cây (BST: min=leftmost, max=rightmost).");
+
+console.log("\n--- 🟡 TRUNG BÌNH THÊM ---");
+console.log("\nBÀI 9: Binary tree từ preorder và inorder (xây lại cây, root = pre[0], tìm trong inorder).");
+console.log("BÀI 10: Kth smallest in BST (inorder đến phần tử thứ k).");
+console.log("BÀI 11: Serialize / Deserialize binary tree (chuỗi hóa và khôi phục cây).");
+
+console.log("\n--- 🔴 NÂNG CAO ---");
+console.log("\nBÀI 12: Binary tree maximum path sum: đường đi bất kỳ (node có thể dùng tối đa 1 lần), trả về tổng lớn nhất.");
+console.log("BÀI 13: Lowest Common Ancestor (cây nhị phân thường, không phải BST).");
+console.log("BÀI 14: Recover BST: 2 node bị swap sai, tìm và sửa (inorder tìm 2 vị trí nghịch thế).");
+
 console.log("\n" + "=".repeat(50));
 console.log("👉 Hãy mở playground.js và implement các hàm trên với test case tương ứng.");
 console.log("=".repeat(50));

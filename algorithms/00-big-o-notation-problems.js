@@ -40,6 +40,21 @@ console.log("  Ví dụ: A = bubble sort (O(n²)), B = merge sort (O(n log n))."
 console.log("- Sinh mảng ngẫu nhiên n phần tử, tăng dần n và đo thời gian.");
 console.log("  → Quan sát runtime thực tế khớp với Big-O như thế nào.");
 
+console.log("\n--- 🟢 CƠ BẢN THÊM ---");
+console.log("\nBÀI 4: Phân tích O(?) của 1 vòng for duyệt mảng n phần tử.");
+console.log("BÀI 5: Phân tích O(?) của 2 vòng for lồng nhau, mỗi vòng n lần.");
+console.log("BÀI 6: Cho đoạn code: tìm min trong mảng rồi tìm max. Time? Space?");
+
+console.log("\n--- 🟡 TRUNG BÌNH THÊM ---");
+console.log("\nBÀI 7: Đếm số cặp (i,j) với a[i] + a[j] = target. Cách O(n²) vs O(n) dùng map.");
+console.log("BÀI 8: Cho thuật toán đệ quy fib(n): phân tích time/space, so với fibMemo(n).");
+console.log("BÀI 9: So sánh O(n), O(n log n), O(n²) bằng đo thời gian với n = 1000, 10000, 50000.");
+
+console.log("\n--- 🔴 NÂNG CAO ---");
+console.log("\nBÀI 10: Thiết kế thuật toán tìm 3 phần tử có tổng = 0, phân tích O(?) và tối ưu.");
+console.log("BÀI 11: Phân tích space complexity của merge sort (call stack + mảng tạm).");
+console.log("BÀI 12: Cho code có vòng lặp while bên trong for: n lần, mỗi lần while tối đa k bước. Tổng O(?) khi k phụ thuộc n.");
+
 console.log("\n" + "=".repeat(50));
 console.log("👉 Hãy qua playground.js để tự triển khai, dùng measureTime() để đo.");
 console.log("=".repeat(50));

@@ -16,6 +16,21 @@ console.log("\nBÀI 2: Sắp xếp giảm dần bằng selection sort (biến th
 console.log("\nBÀI 3: So sánh với bubble sort.");
 console.log("  - Dùng measureTime với mảng lớn → xem thuật toán nào swap ít hơn.");
 
+console.log("\n--- 🟢 CƠ BẢN THÊM ---");
+console.log("\nBÀI 4: In ra phần tử được chọn (min) và vị trí đổi chỗ sau mỗi vòng.");
+console.log("BÀI 5: Selection sort cho mảng string (so sánh theo thứ tự từ điển).");
+console.log("BÀI 6: Trả về số lần hoán đổi (swap) đã thực hiện.");
+
+console.log("\n--- 🟡 TRUNG BÌNH THÊM ---");
+console.log("\nBÀI 7: Dual selection sort: mỗi pass vừa chọn min đưa về đầu vừa chọn max đưa về cuối.");
+console.log("BÀI 8: Sắp xếp mảng object theo key: selectionSort(arr, key) với key='age' hoặc 'name'.");
+console.log("BÀI 9: So sánh số lần so sánh (comparison) của selection vs bubble (cùng mảng).");
+
+console.log("\n--- 🔴 NÂNG CAO ---");
+console.log("\nBÀI 10: Chứng minh selection sort không ổn định (cho ví dụ cụ thể).");
+console.log("BÀI 11: Heap sort dựa trên ý tưởng 'chọn max' nhưng dùng heap → O(n log n). So sánh với selection.");
+console.log("BÀI 12: Tournament sort (tree selection): dùng cây để tìm min nhanh hơn cho từng pass.");
+
 console.log("\n" + "=".repeat(50));
 console.log("👉 Viết hàm selectionSort(nums) trong playground.js và thử nghiệm.");
 console.log("=".repeat(50));

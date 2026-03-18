@@ -82,6 +82,21 @@ console.log("  Output: false");
 console.log("Gợi ý hàm:");
 console.log("  function isPalindrome(head) { /* TODO */ }");
 
+console.log("\n--- 🟢 CƠ BẢN THÊM ---");
+console.log("\nBÀI 6: Tìm độ dài (length) của linked list.");
+console.log("BÀI 7: Tìm node giữa (middle): nếu chẵn trả node thứ n/2 (slow/fast pointer).");
+console.log("BÀI 8: Xoá node khi chỉ có con trỏ tới chính node đó (không có head). Gợi ý: copy value từ next rồi xoá next.");
+
+console.log("\n--- 🟡 TRUNG BÌNH THÊM ---");
+console.log("\nBÀI 9: Reverse linked list từ vị trí left đến right (1-indexed).");
+console.log("BÀI 10: Swap nodes in pairs: 1→2→3→4 thành 2→1→4→3.");
+console.log("BÀI 11: Add two numbers: 2 linked list biểu diễn số (chữ số ngược), trả về list tổng. (2→4→3) + (5→6→4) = (7→0→8).");
+
+console.log("\n--- 🔴 NÂNG CAO ---");
+console.log("\nBÀI 12: Merge K sorted lists (dùng heap hoặc merge lần lượt).");
+console.log("BÀI 13: Reorder list: L0→Ln→L1→Ln-1→... (tìm giữa, đảo nửa sau, merge 2 nửa).");
+console.log("BÀI 14: Copy list with random pointer: mỗi node có next và random, clone toàn bộ list.");
+
 console.log("\n" + "=".repeat(50));
 console.log("👉 Bước tiếp theo: mở playground.js và tự implement các hàm trên.");
 console.log("=".repeat(50));
