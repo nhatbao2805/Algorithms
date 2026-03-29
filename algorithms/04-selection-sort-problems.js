@@ -9,17 +9,25 @@ console.log("║  SELECTION SORT - BÀI TẬP               ║");
 console.log("╚══════════════════════════════════════════╝");
 
 console.log("\nBÀI 1: Cài đặt selection sort tăng dần.");
+console.log("  Input : [5, 1, 4, 2, 8]");
+console.log("  Output: [1, 2, 4, 5, 8]");
 console.log("  Ý tưởng: mỗi vòng chọn phần tử nhỏ nhất còn lại đưa về đầu.");
 
 console.log("\nBÀI 2: Sắp xếp giảm dần bằng selection sort (biến thể nhỏ).");
+console.log("  Input : [1, 3, 2]");
+console.log("  Output: [3, 2, 1]");
 
 console.log("\nBÀI 3: So sánh với bubble sort.");
-console.log("  - Dùng measureTime với mảng lớn → xem thuật toán nào swap ít hơn.");
+console.log("  Input : cùng mảng random n = 2000");
+console.log("  Output: log thời gian ms + (tuỳ chọn) số swap từng thuật toán");
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 4: In ra phần tử được chọn (min) và vị trí đổi chỗ sau mỗi vòng.");
+console.log("  Input : [4, 2, 1]  →  Output: log từng bước, cuối [1,2,4]");
 console.log("BÀI 5: Selection sort cho mảng string (so sánh theo thứ tự từ điển).");
+console.log("  Input : ['dog','ant','cat']  →  Output: ['ant','cat','dog']");
 console.log("BÀI 6: Trả về số lần hoán đổi (swap) đã thực hiện.");
+console.log("  Input : [3, 1, 2]  →  Output: sorted [1,2,3] và swapCount (vd 2)");
 
 console.log("\n--- 🟡 TRUNG BÌNH THÊM ---");
 console.log("\nBÀI 7: Dual selection sort: mỗi pass vừa chọn min đưa về đầu vừa chọn max đưa về cuối.");

@@ -19,7 +19,9 @@ console.log("  Output: [1,2]");
 console.log("  Gợi ý: đếm tần suất bằng hash map, dùng heap để lấy k lớn nhất.");
 
 console.log("\nBÀI 3: Merge K Sorted Lists (sử dụng heap).");
-console.log("  - Mỗi list đã sort, hãy gộp lại thành 1 list sort.");
+console.log("  Input : lists = [[1,4,5],[1,3,4],[2,6]]");
+console.log("  Output: [1,1,2,3,4,4,5,6]");
+console.log("  - Mỗi list đã sort, gộp thành 1 list/array sort.");
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 4: Implement min-heap (insert, extractMin, peek) bằng mảng.");

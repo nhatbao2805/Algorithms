@@ -9,14 +9,20 @@ console.log("║   GREEDY - BÀI TẬP                       ║");
 console.log("╚══════════════════════════════════════════╝");
 
 console.log("\nBÀI 1: Activity Selection (chọn tối đa số buổi).");
-console.log("  - Cho danh sách [start, end], hãy chọn số hoạt động không trùng lớn nhất.");
+console.log("  Input : [[1,4],[2,3],[3,5]]  (start, end)");
+console.log("  Output: 2  (vd: chọn [2,3] và [3,5] hoặc tập tối ưu khác không overlap)");
+console.log("  - Cho danh sách [start, end], chọn số hoạt động không trùng lớn nhất.");
 
 console.log("\nBÀI 2: Coin Change (hệ tiền chuẩn).");
-console.log("  - Cho coins =[1,5,10,25], amount → tìm số xu ít nhất (greedy đúng).");
+console.log("  Input : coins = [1,5,10,25], amount = 67");
+console.log("  Output: 6  (25+25+10+5+1+1 hoặc bộ greedy tương đương)");
+console.log("  - greedy đúng với hệ xu Mỹ.");
 
 console.log("\nBÀI 3: Jump Game.");
-console.log("  - Cho nums, mỗi phần tử là số bước nhảy tối đa.");
-console.log("  - Kiểm tra có thể đến cuối mảng hay không (dùng greedy).");
+console.log("  Input : nums = [2,3,1,1,4]");
+console.log("  Output: true  (có thể đến index cuối)");
+console.log("  Input : nums = [3,2,1,0,4]");
+console.log("  Output: false");
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 4: Best time to buy and sell stock I: 1 lần mua 1 lần bán, lợi nhuận max.");

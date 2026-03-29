@@ -84,8 +84,14 @@ console.log("  function isPalindrome(head) { /* TODO */ }");
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 6: Tìm độ dài (length) của linked list.");
+console.log("  Input : 1 → 2 → 3 → null");
+console.log("  Output: 3");
 console.log("BÀI 7: Tìm node giữa (middle): nếu chẵn trả node thứ n/2 (slow/fast pointer).");
+console.log("  Input : 1 → 2 → 3 → 4 → null");
+console.log("  Output: node 2 hoặc 3 tùy quy ước chẵn (thường trả node thứ 2 trong LeetCode)");
 console.log("BÀI 8: Xoá node khi chỉ có con trỏ tới chính node đó (không có head). Gợi ý: copy value từ next rồi xoá next.");
+console.log("  Input : ... → 4 → 5 → ... , con trỏ đứng tại node 4");
+console.log("  Output: list như đã xoá giá trị 4 (không đổi head từ ngoài)");
 
 console.log("\n--- 🟡 TRUNG BÌNH THÊM ---");
 console.log("\nBÀI 9: Reverse linked list từ vị trí left đến right (1-indexed).");

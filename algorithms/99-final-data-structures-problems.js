@@ -82,6 +82,10 @@ console.log("YÊU CẦU:");
 console.log("  1. Thiết kế cấu trúc dữ liệu RoleNode.");
 console.log("  2. Viết hàm hasPermission(userRole, permission) → true/false");
 console.log("     (tính cả permission kế thừa từ role cha).");
+console.log("CASE MẪU:");
+console.log("  admin có 'read','write'; editor con admin thêm 'publish'");
+console.log("  hasPermission('editor','read') → true (kế thừa)");
+console.log("  hasPermission('guest','write') → false");
 console.log("GỢI Ý:");
 console.log("  - Dùng DFS/BFS trên cây role.");
 
@@ -100,10 +104,15 @@ console.log("  → Kết quả: 2 (A → E → D)");
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nFINAL 6: Stack undo/redo (2 stack).");
 console.log("- Thao tác: do(action), undo(), redo(). Dùng 2 stack lưu history và redo.");
+console.log("CASE MẪU:");
+console.log("  do('A'), do('B'), undo() → state bỏ B; redo() → khôi phục B");
 console.log("\nFINAL 7: Kiểm tra dấu ngoặc cân bằng (stack).");
 console.log("- Chuỗi chỉ gồm ()[]{} kiểm tra đóng mở đúng.");
+console.log("  Input : '()[]{}'  →  Output: true");
+console.log("  Input : '(]'  →  Output: false");
 console.log("\nFINAL 8: First non-repeating character trong stream (queue + map).");
 console.log("- Nhận từng ký tự, trả về ký tự đầu tiên chưa lặp trong stream đến hiện tại.");
+console.log("  Input stream: 'a','b','a'  →  Output firstUnique: 'a','a','b'");
 
 console.log("\n--- 🟡 TRUNG BÌNH THÊM ---");
 console.log("\nFINAL 9: Cache với TTL (time-to-live) dùng Map + thời gian hết hạn.");

@@ -9,14 +9,19 @@ console.log("║   QUEUE - BÀI TẬP                        ║");
 console.log("╚══════════════════════════════════════════╝");
 
 console.log("\nBÀI 1: Cài queue bằng mảng và bằng linked list.");
+console.log("  Input : enqueue(1), enqueue(2), dequeue(), enqueue(3)");
+console.log("  Output: dequeue() → 1, sau đó front là 2 rồi 3");
 console.log("  - So sánh enqueue/dequeue nhiều lần (10^5) xem cách nào nhanh hơn.");
 
 console.log("\nBÀI 2: Implement stack bằng 2 queue.");
+console.log("  Input : push(1), push(2), push(3), pop()");
+console.log("  Output: pop() → 3, top() → 2");
 console.log("  - Hàm: push(x), pop(), top().");
 
 console.log("\nBÀI 3: Simulation hàng chờ in (printer queue).");
+console.log("  Input : jobs [{id:'A',t:1},{id:'B',t:2}] theo FIFO");
+console.log("  Output: thứ tự in A rồi B (hoặc theo priority nếu bạn thêm rule)");
 console.log("  - Mỗi job có độ ưu tiên, thời gian đến.");
-console.log("  - Hãy mô phỏng thứ tự in theo FIFO, có thể thêm ưu tiên.");
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 4: Cài queue bằng mảng (vòng tròn) với capacity cố định, enqueue/dequeue O(1).");

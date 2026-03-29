@@ -9,15 +9,21 @@ console.log("║  INSERTION SORT - BÀI TẬP               ║");
 console.log("╚══════════════════════════════════════════╝");
 
 console.log("\nBÀI 1: Cài insertion sort tăng dần.");
+console.log("  Input : [5, 1, 4, 2, 8]");
+console.log("  Output: [1, 2, 4, 5, 8]");
 console.log("  Ý tưởng: coi như ta đang sắp xếp bài, mỗi lần chèn 1 phần tử vào vị trí đúng.");
 
 console.log("\nBÀI 2: Sắp xếp gần như đã sort.");
-console.log("  - Sinh mảng gần sort (vd: [1,2,3,5,4,6,7])");
-console.log("  - Đo thời gian insertion sort vs bubble sort để thấy ưu thế.");
+console.log("  Input : [1, 2, 3, 5, 4, 6, 7]");
+console.log("  Output: [1, 2, 3, 4, 5, 6, 7]  (insertion thường nhanh hơn bubble trên case này)");
 
 console.log("\nBÀI 3: Sắp xếp mảng các object theo field 'age'.");
-console.log("  Input : [{name:'A', age:30}, {name:'B', age:20}, ...]");
-console.log("  Output: sort tăng dần theo age.");
+console.log(
+  "  Input : [{name:'A', age:30}, {name:'B', age:20}, {name:'C', age:25}]",
+);
+console.log(
+  "  Output: [{name:'B', age:20}, {name:'C', age:25}, {name:'A', age:30}]",
+);
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 4: Insertion sort giảm dần (chèn vào vị trí đúng trong đoạn đã sort).");

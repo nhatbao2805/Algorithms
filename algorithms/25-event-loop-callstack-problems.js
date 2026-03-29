@@ -16,7 +16,9 @@ console.log("╚═════════════════════�
 
 console.log("\n--- 🟢 CƠ BẢN (Bài 1–2) ---");
 console.log("  BÀI 1: Thứ tự sync → Promise.then → setTimeout(0).");
+console.log("    Gợi ý (tự chứng minh): A, D, C, B — sync trước, hết microtask, rồi macrotask");
 console.log("  BÀI 2: Nhiều Promise.then liên tiếp, thứ tự microtask.");
+console.log("    Output mong đợi: xem code trong 25-event-loop-callstack-exercises.js + answers.js");
 
 console.log("\n--- 🟡 TRUNG BÌNH (Bài 3–7) ---");
 console.log("  BÀI 3: Mix microtask + macrotask (setTimeout bên trong có Promise.then).");

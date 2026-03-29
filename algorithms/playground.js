@@ -3,13 +3,9 @@
  * 🎮 PLAYGROUND - VÙNG CODE THỬ NGHIỆM
  * ============================================
  *
- * File này dùng để bạn TỰ CODE và DEBUG.
- *
- * 🚀 TỰ ĐỘNG CHẠY LẠI KHI SAVE:
- *    Trong thư mục Preview chạy:  npm run playground
- *    Mỗi lần bạn Ctrl+S (save) file này → log sẽ chạy lại ngay.
- *
- * Chạy 1 lần (không watch):  node algorithms/playground.js
+ * • `node algorithms/playground.js` → chạy MỘT lần rồi thoát. Save file KHÔNG tự chạy lại.
+ * • Muốn mỗi lần Save là log mới: trong thư mục Preview chạy `npm run playground` và GIỮ terminal đó mở.
+ * • Cursor: Terminal → Run Task… → "Playground: chạy lại mỗi khi save (nodemon)"
  */
 
 // ============================
@@ -63,9 +59,11 @@ function twoSum(nums, target) {
   const map = new Map();
   for (let i = 0; i < nums.length; i++) {
     const complement = target - nums[i];
-    debug(
-      `i=${i}, num=${nums[i]}, cần=${complement}, map has? ${map.has(complement)}`,
-    );
+    if (nums.length <= 20) {
+      debug(
+        `i=${i}, num=${nums[i]}, cần=${complement}, map has? ${map.has(complement)}`,
+      );
+    }
     if (map.has(complement)) return [map.get(complement), i];
     map.set(nums[i], i);
   }
@@ -86,7 +84,3 @@ measureTime("twoSum 10000 phần tử", () => {
   const big = Array.from({ length: 10000 }, (_, i) => i);
   return twoSum(big, 19997);
 });
-
-console.log("💡 Xóa code ví dụ ở trên và viết code của bạn!");
-console.log("   Dùng debug(), assertEqual(), measureTime()");
-console.log("   Chạy: node algorithms/playground.js");

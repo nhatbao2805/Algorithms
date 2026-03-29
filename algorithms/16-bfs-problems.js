@@ -9,14 +9,19 @@ console.log("║   BFS - BÀI TẬP                          ║");
 console.log("╚══════════════════════════════════════════╝");
 
 console.log("\nBÀI 1: Shortest path trên graph vô hướng, unweighted.");
-console.log("  - Input: adjacency list (object), start, target.");
-console.log("  - Output: độ dài đường đi ngắn nhất và đường đi cụ thể.");
+console.log(
+  "  Input : graph = { A:['B'], B:['A','C'], C:['B','D'], D:['C'] }, start=A, target=D",
+);
+console.log("  Output: distance = 3, path vd: A → B → C → D");
+console.log("  - Input tổng quát: adjacency list, start, target.");
 
 console.log("\nBÀI 2: Number of islands (ma trận 0/1).");
-console.log("  - Đếm số đảo (group các ô 1 nối nhau 4 hướng).");
+console.log("  Input : grid = [[1,1,0],[0,1,0],[1,0,1]]");
+console.log("  Output: 3  (ba cụm ô 1 riêng biệt 4-hướng)");
 
 console.log("\nBÀI 3: Mê cung (maze) - từ S đến E.");
-console.log("  - Dùng BFS để tìm đường đi ngắn nhất, in lại đường đi.");
+console.log("  Input : maze 'S' . 'E', '.' đi được, '#' tường (tự chọn ma trận ký tự)");
+console.log("  Output: số bước ngắn nhất + (tuỳ chọn) chuỗi hướng hoặc tọa độ");
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 4: Duyệt graph từ đỉnh start, in ra tất cả đỉnh theo thứ tự BFS.");

@@ -12,16 +12,17 @@ console.log("║   DIJKSTRA - BÀI TẬP                    ║");
 console.log("╚══════════════════════════════════════════╝");
 
 console.log("\nBÀI 1: Shortest path trong graph nhỏ.");
-console.log("  - Graph 4–5 node, edge weight không âm.");
-console.log("  - In ra dist và path từ start đến tất cả node.");
+console.log("  Input : A-B:1, B-C:2, A-C:10, start=A");
+console.log("  Output: dist(A)=0, dist(B)=1, dist(C)=3 (đi A→B→C), path tới C: A,B,C");
+console.log("  - Graph 4–5 node, weight không âm; in dist[] và path.");
 
 console.log("\nBÀI 2: Bản đồ thành phố (như ví dụ trong file chính).");
+console.log("  Input / Output: tự đặt tên đỉnh (Nhà, Trường, …) và in đường + tổng km");
 console.log("  - Tự thiết kế cityMap khác, thêm nhiều đường/tên phố.");
-console.log("  - Tìm đường từ Nhà → mọi nơi (Trường, Chợ, Bệnh viện,...).");
 
 console.log("\nBÀI 3: Ứng dụng Network Delay Time.");
-console.log("  - Tự sinh vài bộ test cho hàm networkDelay(...).");
-console.log("  - Thử case có node không tới được.");
+console.log("  Input : times=[[2,1,1],[2,3,1],[3,4,1]], n=4, k=2  (LeetCode mẫu)");
+console.log("  Output: 2  (thời gian để tất cả node nhận tín hiệu), hoặc -1 nếu không tới được");
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 4: In ra thứ tự các đỉnh được relax (thứ tự Dijkstra).");

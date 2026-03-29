@@ -16,7 +16,8 @@ console.log("\nBÀI 2: Độ dài nhỏ nhất của subarray có tổng ≥ tar
 console.log("  Input : nums = [2,3,1,2,4,3], target=7 → output=2 ([4,3])");
 
 console.log("\nBÀI 3: Longest substring không có ký tự lặp lại.");
-console.log("  Input : 'abcabcbb' → output=3 ('abc')");
+console.log("  Input : 'abcabcbb'");
+console.log("  Output: 3  (substring 'abc')");
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 4: Tìm trung bình lớn nhất của subarray độ dài k. [1,12,-5,-6,50,3], k=4 → 12.75.");

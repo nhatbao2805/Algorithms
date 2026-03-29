@@ -9,14 +9,20 @@ console.log("║   MERGE SORT - BÀI TẬP                  ║");
 console.log("╚══════════════════════════════════════════╝");
 
 console.log("\nBÀI 1: Cài merge sort tăng dần cho mảng số.");
+console.log("  Input : [5, 1, 4, 2, 8]");
+console.log("  Output: [1, 2, 4, 5, 8]");
 console.log("  - Viết hàm merge(a, b) gộp 2 mảng đã sort.");
 console.log("  - Viết hàm mergeSort(nums) dùng đệ quy.");
 
 console.log("\nBÀI 2: Đếm số inversion bằng merge sort.");
+console.log("  Input : [2, 4, 1, 3, 5]");
+console.log("  Output: 3  // (2,1), (4,1), (4,3)");
 console.log("  - Trong khi merge, mỗi lần lấy phần tử từ mảng phải trước mảng trái");
 console.log("    thì tăng số inversion lên đúng với số phần tử còn lại bên trái.");
 
 console.log("\nBÀI 3: So sánh thời gian merge sort với bubble sort trên mảng lớn.");
+console.log("  Input : mảng random n = 5000");
+console.log("  Output: merge << bubble (ghi ms từng thuật toán)");
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 4: Merge 2 mảng đã sort (hàm merge thuần) không dùng sort().");

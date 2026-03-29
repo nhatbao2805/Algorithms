@@ -14,10 +14,15 @@ console.log("  Output: [0,1]");
 console.log("  Gợi ý: i ở đầu, j ở cuối, thu hẹp dần.");
 
 console.log("\nBÀI 2: Kiểm tra palindrome cho string.");
-console.log("  Input : 'abca' → cho phép xoá 1 ký tự.");
+console.log("  Input : 'abca'  (cho phép xoá tối đa 1 ký tự)");
+console.log("  Output: true  (xoá 'b' → 'aca')");
+console.log("  Input : 'abcdef'");
+console.log("  Output: false");
 console.log("  Gợi ý: dùng 2 con trỏ trái/phải, bỏ qua 1 ký tự nếu cần.");
 
 console.log("\nBÀI 3: Merge 2 mảng đã sort thành 1 mảng sort (không dùng sort()).");
+console.log("  Input : [1, 3, 5], [2, 4, 6]");
+console.log("  Output: [1, 2, 3, 4, 5, 6]");
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 4: Loại bỏ phần tử trùng trong mảng đã sort (in-place, trả về độ dài mới).");

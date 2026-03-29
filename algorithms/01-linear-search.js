@@ -12,6 +12,13 @@
  * - Time:  Best O(1) | Average O(n) | Worst O(n)
  * - Space: O(1) - Chỉ dùng vài biến phụ
  *
+ * 👉 Khi gặp bài về unique:
+ *  - Nếu đề nói:
+ *    “remove duplicates” → Set
+ *  - Nếu đề nói:
+ *    “appear once” → Map / counting
+ *  - Nếu đề nói:
+ *    “appear once, còn lại 2 lần” → XOR
  * 📝 CHEAT NOTES:
  * ✅ Dùng khi: Mảng KHÔNG được sắp xếp, dữ liệu nhỏ
  * ✅ Dùng khi: Chỉ tìm 1 lần (không cần sắp xếp trước)

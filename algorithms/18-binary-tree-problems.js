@@ -40,6 +40,7 @@ console.log("               /   \\");
 console.log("              1     4");
 console.log("                   / \\");
 console.log("                  3   6   (4 nằm bên phải 5 nhưng < 5)");
+console.log("  Output: cây hợp lệ → true, cây ví dụ sai → false");
 console.log("Gợi ý hàm:");
 console.log("  function isValidBST(root) { /* TODO - dùng khoảng min/max */ }");
 
@@ -98,8 +99,11 @@ console.log("  function lowestCommonAncestor(root, p, q) { /* TODO */ }");
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 6: Inorder / Preorder / Postorder traversal (đệ quy và iterative dùng stack).");
+console.log("  Input : cây 1-2-3 (root 1, con 2,3)  →  Output inorder: [2,1,3]");
 console.log("BÀI 7: Đếm số node trong cây (countNodes).");
+console.log("  Input : cây BÀI 1 (3-9-20-15-7)  →  Output: 5");
 console.log("BÀI 8: Tìm node có giá trị lớn nhất / nhỏ nhất trong cây (BST: min=leftmost, max=rightmost).");
+console.log("  Input : BST BÀI 5 (root 6)  →  Output: min=0, max=9");
 
 console.log("\n--- 🟡 TRUNG BÌNH THÊM ---");
 console.log("\nBÀI 9: Binary tree từ preorder và inorder (xây lại cây, root = pre[0], tìm trong inorder).");
