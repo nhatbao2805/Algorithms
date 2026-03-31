@@ -12,20 +12,176 @@
  * - Time:  Best O(1) | Average O(n) | Worst O(n)
  * - Space: O(1) - Chỉ dùng vài biến phụ
  *
- * 👉 Khi gặp bài về unique:
- *  - Nếu đề nói:
- *    “remove duplicates” → Set
- *  - Nếu đề nói:
- *    “appear once” → Map / counting
- *  - Nếu đề nói:
- *    “appear once, còn lại 2 lần” → XOR
- * 📝 CHEAT NOTES:
- * ✅ Dùng khi: Mảng KHÔNG được sắp xếp, dữ liệu nhỏ
- * ✅ Dùng khi: Chỉ tìm 1 lần (không cần sắp xếp trước)
- * ✅ Dùng khi: Danh sách liên kết (không truy cập random)
- * ❌ Không dùng khi: Mảng đã sắp xếp (dùng Binary Search)
- * ❌ Không dùng khi: Dữ liệu rất lớn, cần tìm nhiều lần
- *
+# 📘 DSA Quick Notes — Set / Map / XOR
+
+## 🔥 Cách nhận diện nhanh khi làm bài
+
+### 👉 Khi gặp bài về unique / duplicate
+
+* **“remove duplicates”** → dùng **Set**
+* **“appear once / count frequency”** → dùng **Map / counting**
+* **“appear once, còn lại xuất hiện đúng 2 lần”** → dùng **XOR**
+
+---
+
+## 🔹 SET — Những điều cần nhớ
+
+### ✅ Bản chất
+
+Set là tập hợp **không cho phép phần tử trùng lặp**
+
+Ví dụ:
+
+```js
+new Set([1, 2, 2, 3])
+```
+
+👉 kết quả:
+
+```js
+{1, 2, 3}
+```
+
+---
+
+### ⚠️ NOTE RẤT QUAN TRỌNG (tránh hiểu nhầm)
+
+❌ **KHÔNG PHẢI**
+
+> “Set thấy trùng là xoá phần tử cũ”
+
+✅ **ĐÚNG LÀ**
+
+> “Set không cho thêm phần tử trùng lần thứ 2”
+
+Ví dụ:
+
+```js
+set.add(2)
+set.add(2)
+```
+
+👉 kết quả vẫn là:
+
+```js
+{2}
+```
+
+Phần tử `2` **vẫn còn**, chỉ là không thêm lần nữa.
+
+---
+
+### 🔍 Cách check duplicate với Set
+
+👉 luôn check trước khi add
+
+```text
+nếu has(x) → duplicate
+nếu chưa có → add(x)
+```
+
+---
+
+### 🎯 Khi nào dùng Set
+
+* check duplicate
+* remove duplicates
+* kiểm tra phần tử đã xuất hiện chưa
+* bài first repeating element
+
+---
+
+## 🔹 MAP — Những điều cần nhớ
+
+### ✅ Bản chất
+
+Map lưu theo dạng:
+
+```text
+key → value
+```
+
+Ví dụ:
+
+```text
+2 → 3
+```
+
+nghĩa là số `2` xuất hiện `3 lần`
+
+---
+
+### ⚠️ NOTE RẤT QUAN TRỌNG
+
+❌ Map **không tự remove duplicate trong array**
+
+✅ Map **không cho key bị trùng**
+
+Nếu set cùng key lần 2:
+
+```text
+map.set(2, 1)
+map.set(2, 5)
+```
+
+👉 kết quả:
+
+```text
+2 → 5
+```
+
+Giá trị cũ bị **ghi đè**
+
+---
+
+### 🔍 Cách dùng Map để count
+
+```text
+nếu key đã có → +1
+nếu chưa có → set = 1
+```
+
+---
+
+### 🎯 Khi nào dùng Map
+
+* đếm số lần xuất hiện
+* frequency counter
+* Two Sum
+* grouping / mapping data
+
+---
+
+## 🔹 XOR — Những điều cần nhớ
+
+### ✅ Công thức vàng
+
+```text
+a ^ a = 0
+a ^ 0 = a
+```
+
+---
+
+### 🎯 Khi nào dùng XOR
+
+Bài kiểu:
+
+> “mọi phần tử xuất hiện 2 lần, chỉ có 1 phần tử xuất hiện 1 lần”
+
+👉 dùng XOR là tối ưu nhất
+
+---
+
+## 🚀 Cheat Sheet cực nhanh
+
+```text
+check duplicate       → Set
+count frequency       → Map
+find pair complement  → Map
+single number         → XOR
+remove duplicates     → Set
+```
  * 💡 TẠI SAO DÙNG:
  * - Đơn giản, dễ implement
  * - Không cần dữ liệu sắp xếp trước
