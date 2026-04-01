@@ -45,8 +45,11 @@ const bai1 = (nums, target) => {
 //       set.add(nums[i]);
 //     }
 //   }
-//   console.log("aa", map);
 //   return 0;
 // };
 
-// console.log(bai7Cach2([3, 4, 2, 1, 2, 3]));
+// console.log(1111, bai7Cach2([3, 4, 2, 1, 2, 3]));
+
+const bai8 = (nums) => {
+  for (let i = 0; i < nums.length; i++) {}
+};

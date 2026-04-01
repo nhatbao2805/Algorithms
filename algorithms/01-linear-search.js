@@ -1,192 +1,90 @@
 /**
  * ============================================
- * 📘 LINEAR SEARCH - TÌM KIẾM TUYẾN TÍNH
+ * LINEAR SEARCH — TÌM KIẾM TUYẾN TÍNH
  * ============================================
  *
- * 🔍 LÝ THUYẾT:
- * Tìm kiếm tuyến tính (Linear Search) là thuật toán đơn giản nhất.
- * Duyệt qua TỪNG phần tử trong mảng từ đầu đến cuối
- * cho đến khi tìm thấy phần tử cần tìm hoặc hết mảng.
+ * Khái niệm:
+ * - Duyệt lần lượt từng phần tử từ đầu đến cuối mảng.
+ * - Gặp target thì dừng ngay và trả về chỉ số (index).
+ * - Duyệt hết mảng mà không thấy thì trả về -1.
  *
- * 📊 ĐỘ PHỨC TẠP:
- * - Time:  Best O(1) | Average O(n) | Worst O(n)
- * - Space: O(1) - Chỉ dùng vài biến phụ
+ * Độ phức tạp:
+ * - Thời gian: tốt nhất O(1) | trung bình O(n) | xấu nhất O(n)
+ * - Bộ nhớ phụ: O(1)
  *
-# 📘 DSA Quick Notes — Set / Map / XOR
-
-## 🔥 Cách nhận diện nhanh khi làm bài
-
-### 👉 Khi gặp bài về unique / duplicate
-
-* **“remove duplicates”** → dùng **Set**
-* **“appear once / count frequency”** → dùng **Map / counting**
-* **“appear once, còn lại xuất hiện đúng 2 lần”** → dùng **XOR**
-
----
-
-## 🔹 SET — Những điều cần nhớ
-
-### ✅ Bản chất
-
-Set là tập hợp **không cho phép phần tử trùng lặp**
-
-Ví dụ:
-
-```js
-new Set([1, 2, 2, 3])
-```
-
-👉 kết quả:
-
-```js
-{1, 2, 3}
-```
-
----
-
-### ⚠️ NOTE RẤT QUAN TRỌNG (tránh hiểu nhầm)
-
-❌ **KHÔNG PHẢI**
-
-> “Set thấy trùng là xoá phần tử cũ”
-
-✅ **ĐÚNG LÀ**
-
-> “Set không cho thêm phần tử trùng lần thứ 2”
-
-Ví dụ:
-
-```js
-set.add(2)
-set.add(2)
-```
-
-👉 kết quả vẫn là:
-
-```js
-{2}
-```
-
-Phần tử `2` **vẫn còn**, chỉ là không thêm lần nữa.
-
----
-
-### 🔍 Cách check duplicate với Set
-
-👉 luôn check trước khi add
-
-```text
-nếu has(x) → duplicate
-nếu chưa có → add(x)
-```
-
----
-
-### 🎯 Khi nào dùng Set
-
-* check duplicate
-* remove duplicates
-* kiểm tra phần tử đã xuất hiện chưa
-* bài first repeating element
-
----
-
-## 🔹 MAP — Những điều cần nhớ
-
-### ✅ Bản chất
-
-Map lưu theo dạng:
-
-```text
-key → value
-```
-
-Ví dụ:
-
-```text
-2 → 3
-```
-
-nghĩa là số `2` xuất hiện `3 lần`
-
----
-
-### ⚠️ NOTE RẤT QUAN TRỌNG
-
-❌ Map **không tự remove duplicate trong array**
-
-✅ Map **không cho key bị trùng**
-
-Nếu set cùng key lần 2:
-
-```text
-map.set(2, 1)
-map.set(2, 5)
-```
-
-👉 kết quả:
-
-```text
-2 → 5
-```
-
-Giá trị cũ bị **ghi đè**
-
----
-
-### 🔍 Cách dùng Map để count
-
-```text
-nếu key đã có → +1
-nếu chưa có → set = 1
-```
-
----
-
-### 🎯 Khi nào dùng Map
-
-* đếm số lần xuất hiện
-* frequency counter
-* Two Sum
-* grouping / mapping data
-
----
-
-## 🔹 XOR — Những điều cần nhớ
-
-### ✅ Công thức vàng
-
-```text
-a ^ a = 0
-a ^ 0 = a
-```
-
----
-
-### 🎯 Khi nào dùng XOR
-
-Bài kiểu:
-
-> “mọi phần tử xuất hiện 2 lần, chỉ có 1 phần tử xuất hiện 1 lần”
-
-👉 dùng XOR là tối ưu nhất
-
----
-
-## 🚀 Cheat Sheet cực nhanh
-
-```text
-check duplicate       → Set
-count frequency       → Map
-find pair complement  → Map
-single number         → XOR
-remove duplicates     → Set
-```
- * 💡 TẠI SAO DÙNG:
- * - Đơn giản, dễ implement
- * - Không cần dữ liệu sắp xếp trước
- * - Hoạt động trên mọi kiểu dữ liệu
- * - Tốt cho dữ liệu nhỏ (< 100 phần tử)
+ * Khi nên dùng:
+ * - Dữ liệu chưa sắp xếp.
+ * - Số phần tử không quá lớn.
+ * - Chỉ tìm kiếm vài lần, không cần tiền xử lý.
+ *
+ * Khi không nên dùng:
+ * - Dữ liệu lớn và phải tìm nhiều lần.
+ * - Mảng đã sắp xếp (ưu tiên Binary Search).
+ *
+ * Mẹo nhớ nhanh:
+ * - linearSearch thường trả về index đầu tiên tìm thấy.
+ * - Nếu cần tất cả vị trí trùng nhau, phải duyệt hết mảng.
+ *
+ * ============================================
+ * DSA QUICK NOTES — SET / MAP / XOR
+ * ============================================
+ *
+ * Cách nhận diện nhanh khi làm bài
+ *
+ * Khi gặp bài về unique / duplicate:
+ * - "remove duplicates" → dùng Set
+ * - "appear once / count frequency" → dùng Map / đếm
+ * - "appear once, còn lại xuất hiện đúng 2 lần" → dùng XOR
+ *
+ * --- SET — Những điều cần nhớ ---
+ *
+ * Bản chất: Set là tập hợp không cho phép phần tử trùng lặp.
+ *
+ * Ví dụ:
+ *   new Set([1, 2, 2, 3])  →  {1, 2, 3}
+ *
+ * Lưu ý (tránh hiểu nhầm):
+ * - Sai: "Set thấy trùng là xóa phần tử cũ"
+ * - Đúng: "Set không cho thêm phần tử trùng lần thứ hai"
+ *   set.add(2); set.add(2);  →  vẫn chỉ có {2} (phần tử 2 vẫn còn, không thêm lần nữa)
+ *
+ * Cách kiểm tra duplicate với Set (luôn kiểm tra trước khi add):
+ *   nếu has(x) → duplicate
+ *   nếu chưa có → add(x)
+ *
+ * Khi nào dùng Set:
+ * - Kiểm tra duplicate, loại bỏ trùng, đã xuất hiện chưa
+ * - Bài first repeating element
+ *
+ * --- MAP — Những điều cần nhớ ---
+ *
+ * Bản chất: Map lưu dạng key → value (ví dụ 2 → 3 nghĩa là số 2 xuất hiện 3 lần).
+ *
+ * Lưu ý:
+ * - Map không tự remove duplicate trong mảng gốc.
+ * - Map không cho key trùng: ghi cùng key lần hai sẽ ghi đè giá trị.
+ *   map.set(2, 1); map.set(2, 5);  →  key 2 có giá trị 5 (ghi đè giá trị cũ)
+ *
+ * Cách dùng Map để đếm:
+ *   nếu key đã có → +1
+ *   nếu chưa có → set = 1
+ *
+ * Khi nào dùng Map:
+ * - Đếm số lần xuất hiện, frequency counter, Two Sum, nhóm/ghép dữ liệu
+ *
+ * --- XOR — Những điều cần nhớ ---
+ *
+ * Công thức: a ^ a = 0 ;  a ^ 0 = a
+ *
+ * Khi nào dùng XOR:
+ * - Bài kiểu: mọi phần tử xuất hiện 2 lần, chỉ một phần tử xuất hiện 1 lần → XOR thường tối ưu.
+ *
+ * Cheat sheet nhanh:
+*   check duplicate (kiểm tra trùng lặp)          → Set
+*   count frequency (đếm tần suất)                → Map
+*   find pair complement (tìm cặp bù)             → Map
+*   single number (phần tử xuất hiện 1 lần)       → XOR
+*   remove duplicates (loại bỏ phần tử trùng)     → Set
  */
 
 // ============================
