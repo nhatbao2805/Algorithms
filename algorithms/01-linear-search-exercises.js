@@ -50,6 +50,17 @@ const bai1 = (nums, target) => {
 
 // console.log(1111, bai7Cach2([3, 4, 2, 1, 2, 3]));
 
-const bai8 = (nums) => {
-  for (let i = 0; i < nums.length; i++) {}
+const bai8 = (nums, target) => {
+  let map = new Map();
+  let arrayReturn = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (map.get(target - nums[[i]])) {
+      arrayReturn.push([map.get(target - nums[[i]]), nums[i]]);
+    } else {
+      map.set(nums[i], nums[i]);
+    }
+  }
+  console.log("map", map);
+  console.log("arrayReturn", arrayReturn);
 };
+bai8([1, 2, 3, 4, 5], 6);
