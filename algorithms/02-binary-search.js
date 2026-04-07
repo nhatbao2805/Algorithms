@@ -21,6 +21,16 @@
  * ✅ Dùng khi: Cần tìm kiếm nhiều lần
  * ✅ Dùng khi: Dữ liệu lớn (triệu phần tử)
  * ✅ Dùng khi: Tìm biên (lower bound, upper bound)
+ * 🔹 lowerBound(x):
+ *    - Trả về index đầu tiên có giá trị >= x
+ *    - Nếu x chưa có trong mảng, đây là vị trí chèn x để vẫn giữ tăng dần
+ * 🔹 upperBound(x):
+ *    - Trả về index đầu tiên có giá trị > x
+ *    - Là vị trí ngay sau phần tử x cuối cùng
+ * 🔸 Ví dụ nhớ nhanh với arr = [1,2,4,4,4,7]
+ *    - x = 4  → lowerBound = 2, upperBound = 5, số lần xuất hiện = 5 - 2 = 3
+ *    - x = 3  → lowerBound = 2, upperBound = 2 (chèn 3 vào index 2, trước số 4)
+ *    - x = 8  → lowerBound = 6, upperBound = 6 (chèn cuối mảng)
  * ❌ Không dùng khi: Mảng chưa sắp xếp
  * ❌ Không dùng khi: Dữ liệu thay đổi liên tục
  *

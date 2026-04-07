@@ -21,9 +21,24 @@ console.log("  Output: index = 2  (chèn 3 vào trước số 4)");
 console.log("  Gợi ý: biến thể binary search.");
 
 console.log("\nBÀI 3: Tìm số nhỏ nhất trong mảng xoay.");
+console.log("  Mảng xoay = mảng tăng dần ban đầu bị cắt tại 1 điểm rồi đổi chỗ 2 đoạn.");
+console.log("  Ví dụ: [0,1,2,4,5,6,7] xoay thành [4,5,6,7,0,1,2].");
+console.log("  Đặc điểm: vẫn gồm 2 đoạn đã sort, và có 1 điểm gãy (pivot).");
 console.log("  Input : nums = [4,5,6,7,0,1,2]");
 console.log("  Output: 0  (index có thể là 4 tùy đề — thống nhất trả value hoặc index)");
 console.log("  Gợi ý: binary search trên mảng đã xoay (rotated).");
+console.log(` 
+                Có nghĩa là hai mảng bị tách ra bởi pivot thì nó đều là 2 
+                mảng đã được sắp xếp tăng dần dẫn đến việc số cuối cùng của
+                mảng bên phải là lớn nhất và số cuối cùng của 
+                mảng bên trái luôn là nhỏ nhất `
+        );
+console.log("\nBÀI 3.1: Tìm số lớn nhất trong mảng xoay.");
+console.log("  Input : nums = [4,5,6,7,0,1,2]");
+console.log("  Output: 7");
+console.log("  Gợi ý: tìm index nhỏ nhất (pivot) trước, rồi lấy phần tử đứng ngay trước pivot.");
+console.log("  Công thức: maxIndex = (pivot - 1 + n) % n");
+
 
 console.log("\n--- 🟢 CƠ BẢN THÊM ---");
 console.log("\nBÀI 4: Tìm vị trí cuối cùng của target (upper bound).");
