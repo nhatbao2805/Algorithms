@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "playground": "nodemon --watch algorithms/playground.js algorithms/playground.js",
-    "playground:quiet": "nodemon --watch algorithms/playground.js algorithms/playground.js --quiet"
+    "playground:quiet": "nodemon --watch algorithms/playground.js algorithms/playground.js --quiet",
+    "exercises:binary-search": "nodemon --watch algorithms/02-binary-search-exercises.js algorithms/02-binary-search-exercises.js"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"

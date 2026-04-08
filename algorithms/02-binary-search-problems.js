@@ -27,12 +27,7 @@ console.log("  Đặc điểm: vẫn gồm 2 đoạn đã sort, và có 1 điể
 console.log("  Input : nums = [4,5,6,7,0,1,2]");
 console.log("  Output: 0  (index có thể là 4 tùy đề — thống nhất trả value hoặc index)");
 console.log("  Gợi ý: binary search trên mảng đã xoay (rotated).");
-console.log(` 
-                Có nghĩa là hai mảng bị tách ra bởi pivot thì nó đều là 2 
-                mảng đã được sắp xếp tăng dần dẫn đến việc số cuối cùng của
-                mảng bên phải là lớn nhất và số cuối cùng của 
-                mảng bên trái luôn là nhỏ nhất `
-        );
+
 console.log("\nBÀI 3.1: Tìm số lớn nhất trong mảng xoay.");
 console.log("  Input : nums = [4,5,6,7,0,1,2]");
 console.log("  Output: 7");

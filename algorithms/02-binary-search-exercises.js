@@ -23,37 +23,37 @@ const Bai2  = (nums,target) =>{
     let left = 0
     let right = nums.length - 1;
     while (left <= right){
-        const mid = Math.floor((left + right) / 2);
-        if(nums[mid] >= target){
-            return mid
-        } else {
-            left = mid + 1;
-        }
+      const mid = Math.floor((left + right) / 2);
+      if(nums[mid] >= target) {
+        return mid;
+      } else{
+        left = mid +1;
+      }
+
         
     }
     return -1;
 }
 
-// let index = Bai2([1,2,4,4,5],3);
+// let index = Bai2([1,2,3,5,6,7,8],4);
 // console.log("index",index)
 
 
-// const Bai3 = (nums) =>{
-//     let left = 0
-//     let right = nums.length - 1;
-//     while (left < right) {
-//         // console.log("left",left)
-//         const mid = Math.floor((left + right) / 2);
-//         if(nums[mid] > nums[right]){
-//             // console.log("left",left)
-//             left = mid + 1;
-//         } else {
-//             right = mid ;
-//         }
-//     }
-//     return left
-// }
-// let index = Bai3([4,5,6,7,0,1,2]);
+const Bai3 = (nums) =>{
+    let left = 0
+    let right = nums.length - 1;
+    while (left < right) {
+        // console.log("left",left)
+        const mid = Math.floor((left + right) / 2);
+        if(nums[mid] > nums[right]){
+            left = mid + 1;
+        } else{
+            right = mid - 1;
+        }
+    }
+    return left
+}
+// let index = Bai3([0,1,2,4,5,6,7]);
 // console.log("index",index)
 
 
@@ -64,14 +64,18 @@ const Bai4 = (nums,target) =>{
     while (left < right) {
         const mid = Math.floor((left + right) / 2);
         if(nums[mid] === target) {
-            return mid;
-        }
-        if(nums[mid] < target){
+            ans = mid;
             left = mid + 1;
         }
+        else if(nums[mid] < target){
+            left = mid + 1 ;
+        } else {
+            right = mid - 1 ;
+        }
+      
     }
-    return -1
+    return ans
 }
 
-// let index = Bai4([1,2,4,4,5],4);
-// console.log("index",index)
+let index = Bai4([1,2,4,4,5],4);
+console.log("index",index)
