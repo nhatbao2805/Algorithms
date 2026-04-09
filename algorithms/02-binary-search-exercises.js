@@ -10,7 +10,7 @@ const binarySearch = (nums, target) => {
   while (left <= right) {
     const mid = Math.floor((left + right) / 2);
     if (nums[mid] === target) return mid;
-    if (nums[mid] < target) {
+    else if (nums[mid] < target) {
       left = mid + 1;
     } else {
       right = mid - 1;
@@ -19,7 +19,7 @@ const binarySearch = (nums, target) => {
   return -1;
 };
 
-// let index = binarySearch([1, 2, 3, 4, 5, 6, 7], 4);
+// let index = binarySearch([1, 2, 2, 3, 4, 5, 6, 7], 4);
 // console.log("index", index);
 
 // -----------------------------
@@ -99,5 +99,5 @@ const countOccurrences = (nums, target) => {
   return lastIndex - firstIndex + 1;
 };
 
-const index = countOccurrences([1, 2, 4, 4, 4, 4, 5], 4);
-console.log("index", index);
+// const index = countOccurrences([1, 2, 4, 4, 4, 4, 5], 4);
+// console.log("index", index);
