@@ -1,6 +1,7 @@
 # Đáp án / bài giải — Giải thuật & cấu trúc dữ liệu
 
-> Đi kèm `algorithms-interview-questions.md`. Trả lời phỏng vấn: định nghĩa ngắn → ví dụ → độ phức tạp.
+> Đi kèm `algorithms-interview-questions.md`. Trả lời phỏng vấn: định nghĩa ngắn → ví dụ → độ phức tạp.  
+> **Luyện code:** phần **Phụ lục A–T** trong file câu hỏi có bảng **input / output** mẫu; dùng để viết test hoặc `demo-io.js`.
 
 ---
 
